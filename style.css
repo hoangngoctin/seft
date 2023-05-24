@@ -12,17 +12,22 @@ a {
   display: block;
 }
 
+.container {
+  margin-top: 4rem;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem ;
+  padding: 1rem 6rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: #fff;
   z-index: 10;
+  border-bottom: 1px solid #f2f4f7;
 }
 
 .nav-bar .nav-branding {
@@ -30,13 +35,13 @@ a {
   position: relative;
   z-index: 999;
 }
-.nav-bar .nav-branding img{
+.nav-bar .nav-branding img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.nav-bar .nav-menu{
+.nav-bar .nav-menu {
   padding: 0;
   display: flex;
   margin-bottom: 0;
@@ -61,7 +66,7 @@ a {
 
 .nav-link:hover,
 .nav-link:focus {
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   color: #ef6820;
   text-decoration: none;
 }
@@ -77,7 +82,7 @@ a {
   width: 24px;
   height: 2px;
   margin: 6px auto;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -97,14 +102,13 @@ a {
 .main-3,
 .main-4,
 .main-5 {
-  padding: 4rem 0;
+  padding: 6rem 0 2rem;
 }
 
 .main-1 .main-1-top,
 .main-2 .main-2-top,
 .main-3 .main-3-top,
 .main-5 .main-5-top {
-  padding: 6rem 0;
   text-align: center;
 }
 
@@ -137,7 +141,7 @@ a {
   font-weight: 600;
   font-size: 1.25rem;
   padding: 1rem 1.2rem;
-  width: fit-content;
+  width: max-content;
   margin: 3rem auto;
 }
 
@@ -160,35 +164,35 @@ a {
   z-index: 9;
 }
 
-.main-1 .main-1-mid .img-wrap {
+.main-1 .main-1-mid .img-small {
   max-width: 25%;
   position: absolute;
   z-index: -1;
 }
 
-.main-1 .main-1-mid .img-wrap.is-left-top {
+.main-1 .main-1-mid .img-small.is-left-top {
   top: 0%;
   left: -14%;
 }
 
-.main-1 .main-1-mid .img-wrap.is-left-bot {
+.main-1 .main-1-mid .img-small.is-left-bot {
   bottom: 0;
   left: -15%;
   z-index: 10;
 }
 
-.main-1 .main-1-mid .img-wrap.is-right-top {
+.main-1 .main-1-mid .img-small.is-right-top {
   right: -18%;
   top: 0;
 }
 
-.main-1 .main-1-mid .img-wrap.is-right-bot {
+.main-1 .main-1-mid .img-small.is-right-bot {
   right: -18%;
   bottom: 0;
   z-index: 10;
 }
 
-.main-1 .main-1-mid .img-wrap.is-cen-bot {
+.main-1 .main-1-mid .img-small.is-cen-bot {
   z-index: 10;
   left: 39%;
   bottom: 0;
@@ -293,7 +297,7 @@ a {
 }
 
 .main-3 .main-3-mid .tab-content .tab-pane {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .nav-pills .nav-link {
@@ -355,7 +359,7 @@ a {
   border: 1px solid #b1bac6;
   font-weight: 600;
   width: fit-content;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .main-4 .main-4-title .list-button .btn-1 {
@@ -366,20 +370,25 @@ a {
   font-weight: 600;
   color: #fff;
   text-transform: capitalize;
+  margin-left: 1rem;
 }
 .main-4 .main-4-title .list-button .btn-1:hover {
   background: #f38744;
 }
 
+.main-5 .main-5-mid {
+  padding: 2rem 0;
+}
+
 .main-5 .main-5-mid .card-header {
   border-bottom: none;
-  padding: 1.45rem 1.25rem;
+  padding: 1.45rem 0;
+  background: #fff;
 }
 
 .main-5 .main-5-mid .card-header button {
   border: none;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background: none;
 }
@@ -423,7 +432,7 @@ a {
 .foot-main {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
 }
 
 .foot-main .footer-left {
@@ -484,9 +493,10 @@ a {
   color: #252422;
 }
 
-
-
 @media (max-width: 992px) {
+  .nav-bar {
+    padding: 1rem;
+  }
   .nav-bar .nav-menu {
     position: fixed;
     left: 0;
@@ -496,11 +506,11 @@ a {
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: all .3s;
+    transition: all 0.3s;
     z-index: 10;
     line-height: 2;
   }
-  
+
   .nav-bar .nav-menu.active {
     top: 3rem;
     padding-top: 5rem;
@@ -513,8 +523,9 @@ a {
     z-index: 999;
   }
 
-  .nav-item:last-child{
-    margin: 0 20rem;
+  .nav-item:last-child {
+    margin: 0 auto;
+    width: max-content;
   }
 
   .main-1 .main-1-top p,
@@ -524,7 +535,7 @@ a {
   }
 
   .main-1 .main-1-mid {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
   }
 
@@ -575,7 +586,30 @@ a {
   p {
     font-size: 1rem !important;
   }
-  .nav-item:last-child{
-    margin: 0 7rem;
+  .main-1,
+  .main-2,
+  .main-3,
+  .main-4,
+  .main-5 {
+    padding: 2rem 0;
+  }
+  #pills-tab {
+    flex-direction: column;
+  }
+  .main-3 .main-3-mid ul li {
+    width: 100%;
+  }
+  .main-5 .main-5-mid .card-header button h6{
+    font-size: .9rem;
+  }
+  .main-2 .main-2-mid .list-title .items .items-name,
+  .main-5 .main-5-top h3{
+    margin: 1rem 0;
+  }
+  .main-1 .main-1-top a{
+    font-size: 1rem;
+  }
+  .main-2 .main-2-mid{
+    margin-bottom: 0;
   }
 }
