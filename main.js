@@ -17,3 +17,6 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
+
+document.getElementById('autoplay').play();
